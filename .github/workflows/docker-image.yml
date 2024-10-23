@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASS
     - name: Build the Docker image
-      run: docker build ./Tutorial6/randomquotes --file Dockerfile --tag jdacunag/express-randomquotes:latest
+      run: docker build ./Tutorial6/randomquotes --file ./Tutorial6/randomquotes/Dockerfile --tag jdacunag/express-randomquotes:latest
       
     - name: Docker Push
       run: docker push jdacunag/express-randomquotes
